@@ -10,7 +10,7 @@ app.use(cors({ origin: true, credentials: true }));
 app.use(express.json())
 
 app.get('/', (_, res)=>{
-    res.send("hi")
+    res.send("<h1>Hello World!</h1>")
 })
 
 app.get('/readAll', async(_, res)=>{
@@ -74,4 +74,4 @@ app.put('/update', async(req, res)=>{
     }
 })
 
-app.listen(8080, ()=>{console.log("listening at http://localhost:8080");})
+app.listen(process.env.PORT || 3000, ()=>{console.log("listening at http://localhost:8080");})
