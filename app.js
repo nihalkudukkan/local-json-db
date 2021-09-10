@@ -9,6 +9,10 @@ app.use(cors({ origin: true, credentials: true }));
 
 app.use(express.json())
 
+app.get('/', (_, res)=>{
+    res.send("hi")
+})
+
 app.get('/readAll', async(_, res)=>{
     try {
         let users = await services.readAll('./database/user.json')
