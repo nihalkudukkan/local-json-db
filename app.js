@@ -1,5 +1,6 @@
 const express = require('express');
 const Services = require('./services');
+const cors = require('cors');
 const services = new Services()
 
 const app = express();
